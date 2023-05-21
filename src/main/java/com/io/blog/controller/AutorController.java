@@ -14,12 +14,6 @@ public class AutorController {
 	@Autowired
 	private AutorService serviceAutor;
 	
-	//@GetMapping("/formulario")
-	//public ModelAndView formulario() {
-		//ModelAndView mv = new ModelAndView("formulario");
-		//mv.addObject("autor", new Autor());
-		//return mv;}
-	
 	@GetMapping("autor/formulario")
 	public String formulario() {
 		return "formulario";
