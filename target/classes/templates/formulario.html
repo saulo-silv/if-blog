@@ -5,18 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    
-    
-    
+    <link rel="stylesheet" href="style.css">
+    <style>
+		body{
+			background-image: url("https://ifce.edu.br/cedro/imagens/galeria_fotos/campus/vista-superior-interna-campus-cedro.jpg/@@images/bf1d1e45-9fbd-494c-9cac-f15a84bc4866.jpeg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			
+		}
+		h4{
+			color: aquamarine;
+		}
+		p{
+		font-size: 15px;
+		}
+		form{
+			background-color: white;
+			text-align: center;
+			padding: 15px;
+			position: absolute;
+			top: 9%;
+			left: 34%;
+		}
+		input{
+			border-radius: 20px	;
+			font-size: 11.5px;
+			padding: 3px;
+		}
+		.cad{
+			background-color:chartreuse;
+			padding: 6px;
+		}
+	</style>
 </head>
+
 <body>
 	<form action="/autor/salvar" method="POST">
-		Nome: <br><input type="text" name="nome"/> <br>
-		Email: <br><input type="text" name="email"/> <br>
-		Matricula: <br><input type="text" name="matricula"/> <br>
-		Senha: <br><input type="text" name="senha"/> <br>
+		<h4>Cadastro</h4>
+		<p>Por favor preencha os abaixo para<br>realizar seu cadastro no blog</p>
+		 <br><input type="text" name="nome"placeholder="Nome"/> <br>
+		 <br><input type="email" name="email"placeholder="Email"/> <br>
+		 <br><input type="text" name="matricula"placeholder="Matricula"/> <br>
+		 <br><input type="password" name="senha"placeholder="Senha"/> <br>
+		 <br><input type="password" name="confirmar senha"placeholder=" Confirmar Senha"/> <br>
+		 <br><input type="file" name= "imagem" placeholder="img">  <br>
 				
-		<br><input type="submit" value="Cadastrar"/>
+		<br><input class="cad" type="submit" value="Cadastrar"/>
 	</form>
     
 </body>

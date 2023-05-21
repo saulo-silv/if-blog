@@ -6,7 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-
 public class Autor {
 	
 	@Id
@@ -16,6 +15,7 @@ public class Autor {
 	private String email;
 	private String matricula;
 	private String senha;
+	private String confSenha;
 	private Boolean admin;
 	
 	public Long getId() {
@@ -50,6 +50,13 @@ public class Autor {
 	}
 	public Boolean getAdmin() {
 		return admin;
+			
+	}
+	public String getConfSenha() {
+		return confSenha;
+	}
+	public void setConfSenha(String confSenha) {
+		this.confSenha = confSenha;
 	}
 	public void setAdmin(Boolean admin) {
 		this.admin = admin;
