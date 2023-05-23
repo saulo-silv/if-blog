@@ -15,7 +15,7 @@ public class Autor {
 	private String email;
 	private String matricula;
 	private String senha;
-	private String confSenha;
+	private String confirmar;
 	private Boolean admin;
 	
 	public Long getId() {
@@ -52,11 +52,11 @@ public class Autor {
 		return admin;
 			
 	}
-	public String getConfSenha() {
-		return confSenha;
+	public String getConfirmar() {
+		return confirmar;
 	}
-	public void setConfSenha(String confSenha) {
-		this.confSenha = confSenha;
+	public void setConfirmar(String confirmar) {
+		this.confirmar = confirmar;
 	}
 	public void setAdmin(Boolean admin) {
 		this.admin = admin;
