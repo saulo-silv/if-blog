@@ -1,9 +1,13 @@
 package com.io.blog.model;
 
+
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotEmpty;
 
 @Entity
 public class Autor {
@@ -11,11 +15,13 @@ public class Autor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@NotEmpty
+	@Column(nullable = false)
 	private String nome;
 	private String email;
 	private String matricula;
 	private String senha;
-	private String confirmar;
 	private Boolean admin;
 	
 	public Long getId() {
@@ -49,22 +55,15 @@ public class Autor {
 		this.senha = senha;
 	}
 	public Boolean getAdmin() {
-		return admin;
-			
-	}
-	public String getConfirmar() {
-		return confirmar;
-	}
-	public void setConfirmar(String confirmar) {
-		this.confirmar = confirmar;
+		return admin;		
 	}
 	public void setAdmin(Boolean admin) {
 		this.admin = admin;
 	}
-	
-	
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Autor [id=" + id + ", nome=" + nome + ", email=" + email + ", matricula=" + matricula + ", senha="
+				+ senha + ", admin=" + admin + "]";
+	}
 	
 }
